@@ -2,8 +2,25 @@
 # 1. Construct Veroni cells.
 # 2. We will not do Delaunay Triangulation as it eats up lot of time.
 #=
+# References : Avoiding Delaunay triangulation and Veroni cells construction by limiting
+#              dimensions to 4 and computing balls intersections by geometric analysis 
+#              thus avoiding distance to co-ordinates and then using CGAL Epick_d kernels.
+# Word on Epick_d:
+# 
+Epick_d:
+
+    Exact Predicates, Inexact Constructions:
+    This kernel provides exact results for geometric predicates (tests like determining if a point is inside a polygon), 
+    but the geometric constructions (e.g., finding the intersection of two lines) are not guaranteed to be exact.
+    Filtering:
+    It uses filtering techniques to achieve exact predicates without sacrificing speed.
+
 Parallel computation of alpha complexes for biomolecules
 Talha Bin Masood a,∗, Tathagata Ray b , Vijay Natarajan c,
+
+Computing the alpha complex using dual active set quadratic programming
+Carlsson, E., Carlsson, J. Computing the alpha complex using dual active set quadratic programming.
+Sci Rep 14, 19824 (2024). https://doi.org/10.1038/s41598-024-63971-3
 =#
 
 module Alpha
@@ -23,7 +40,7 @@ using .STs
 using Base: insert!
 using DataStructures
 
-Ball_radius = 5.0    # https://discourse.julialang.org/t/static-structs-with-constant-field/48009
+Ball_radius = 1.5    # https://discourse.julialang.org/t/static-structs-with-constant-field/48009
 
 mutable struct AlphaComplex
     dimension :: Int
@@ -170,6 +187,8 @@ function gathersimplices(AlphaC::AlphaComplex, dim::Integer) :: Vector{Vector{In
     # there are no deeper level children at start.
     # we do union find i.e. find cliques.
     tetrahedrons_or_tri = Vector{Vector{Int}}()
+    triangles_of_added_tetra = Vector{Tuple{Int, Int, Int}}()
+
     for simplices_0 in C         # scan vertices
         simplices_1 = STs.get_children(AlphaC.simplices, simplices_0)
 	#println("Pr - ", simplices_0, "Children - ", simplices_1)
@@ -187,29 +206,31 @@ function gathersimplices(AlphaC::AlphaComplex, dim::Integer) :: Vector{Vector{In
                     edge_1_3 = sv[3] in simplices_1  # 1 is connected to 3
                     edge_1_4 = sv[4] in simplices_1  # 1 is connected to 3
                     edge_2_4 = sv[4] in simplices_2  # 2 is connected to 4
+
+                    # Simplex tree first level children
+                    node_1 = STs.find_child(AlphaC.simplices, simplices_0)
+                    node_2 = STs.find_child(AlphaC.simplices, child)
+                    # Simplex tree starts out with 1 init_depot_path
+                    # Only edges are stored so if 1 is connected to 1-2-3-4 we will have 
+                    # 1-2, 1-3, 1-4, 2-3, 3-4..., so we will need to pick gchild as child from root node, and then look
+                    node_3 = STs.find_child(AlphaC.simplices, gchild)
+                    node_4 = STs.find_child(AlphaC.simplices, ggchild)
+
+                    # Now get distances between nodes.
+                    # This gives information about distances among points on tetrahedron.
+                    # we need to keep track of longest distance to make sure it is less than 
+                    # radius of bounding sphere + radius of the ball at either of those points.
+                    ## -- This is to make sure point of intersection of 3 balls (Radius of bounding sphere) is on the 
+                    ## -- surface of 4th ball. 
+                    node_5 = STs.find_child(node_2, gchild) # b-C
+                    node_6 = STs.find_child(node_2, ggchild) # b-C
+                    node_7 = STs.find_child(node_3, ggchild) # b-C
+
                     # We confirmed edges exists which are within 2*Ball Radius distance.
                     if dim == 3 && edge_1_3 && edge_2_4 && edge_1_4
                         # Compute bounding sphere
                         three_distances = Vector{Float32}()
-                        # Simplex tree first level children
-                        node_1 = STs.find_child(AlphaC.simplices, simplices_0)
-                        node_2 = STs.find_child(AlphaC.simplices, child)
-                        # Simplex tree starts out with 1 init_depot_path
-                        # Only edges are stored so if 1 is connected to 1-2-3-4 we will have 
-                        # 1-2, 1-3, 1-4, 2-3, 3-4..., so we will need to pick gchild as child from root node, and then look
-                        node_3 = STs.find_child(AlphaC.simplices, gchild)
-                        node_4 = STs.find_child(AlphaC.simplices, ggchild)
-
-                        # Now get distances between nodes.
-                        # This gives information about distances among points on tetrahedron.
-                        # we need to keep track of longest distance to make sure it is less than 
-                        # radius of bounding sphere + radius of the ball at either of those points.
-                        ## -- This is to make sure point of intersection of 3 balls (Radius of bounding sphere) is on the 
-                        ## -- surface of 4th ball. 
-                        node_5 = STs.find_child(node_2, gchild) # b-C
-                        node_6 = STs.find_child(node_2, ggchild) # b-C
-                        node_7 = STs.find_child(node_3, ggchild) # b-C
-
+                        
                         # these are distances from a, i.e. a-b, a-c, a-d, we also need b-c, b-d, c-d
                         # birth carries edge length (except for first where it carries distance to 2., 2 carries distance to 1)
                         # 3.birth is distance of node 3 to node 1 etc..
@@ -261,13 +282,33 @@ function gathersimplices(AlphaC::AlphaComplex, dim::Integer) :: Vector{Vector{In
                         # These relationships come from considering the largest triangles/tetrahedron that can be inscibed in a sphere... Farthest points can be all equal
                         # once we consider worse case, every other case will place spheres into intersecting positions.
                         # 
-                        if ((4*R)/sqrt(6) > v)                       # Point of intersection of 3 balls is on 4th Ball
+                        # Check for all equal size balls are crossing and distance from vertex R:
+                        if ( (1.63299*R) < (2*Ball_radius) && (4*R)/sqrt(6) > v)                       # Point of intersection of 3 balls is on 4th Ball
                             push!(tetrahedrons_or_tri, [simplices_0, child, gchild, ggchild]) # we will add all triangles 
+			    push!(triangles_of_added_tetra, (simplices_0, child, gchild)) # we will add all triangles (1-2-3) 
+			    push!(triangles_of_added_tetra, (child, gchild, ggchild)) # we will add all triangles     (2-3-4)
+			    push!(triangles_of_added_tetra, (simplices_0, gchild, ggchild)) # we will add all triangles (1-3-4)
+			    push!(triangles_of_added_tetra, (simplices_0, child, ggchild)) # we will add all triangles (1-2-4)
                         end
                     else
-			            if dim <=3 && edge_1_3 && !([sv[1], sv[2], sv[3]] in tetrahedrons_or_tri) 
+			# Alpha complex creation drops close by points
+			# Alpha complex does not get build up linearly as Vietoris-Rips
+			# we may encounter triangles which are already added earlier as we move to newer nodes
+			# It is called ignoring the points in circumradius of 3 points which are closer. 
+			# -------- We will address this by maintaining triangles as part of Tetrahedrons added into simplex.
+			# Example : We added 1-6-30-32, leter on we encountered 1-27-30-31, processing some node, which also saw
+			#           1-30-32. This is not coming in from Vietoris Rips like hierarchy where we get all nearby structures added
+			#           in one go so maintaining just a tetrahedron or triangle as key is enough... as we get 1-2-3-4, 1-2-3-5,1-2-3-6...1-2-3-81
+			#           Here getting one 1-30-32 is happening because it qualified distance criteria again as some terahedrons did not get added
+			#           earlier, in-order as Vietoris-Rips as Balls did not intersect.
+			#           https://proceedings.mlr.press/v139/carriere21a/carriere21a-supp.pdf
+			#           A remark about the locally Lipschitz...
+			#           -------------------------------------------------------------------
+			if dim <=3 && edge_1_3 && !([sv[1], sv[2], sv[3]] in tetrahedrons_or_tri) 
                             # for triangles we will use upperbounds from our geometric analysis
                             # All distances should be less than 1.73205*Ball_radius for triangles to be in.
+
+                            #=
                             node_1 = STs.find_child(AlphaC.simplices, simplices_0)
                             node_2 = STs.find_child(AlphaC.simplices, child) # a-b
                             # Simplex tree starts out with 1 init_depot_path
@@ -275,40 +316,59 @@ function gathersimplices(AlphaC::AlphaComplex, dim::Integer) :: Vector{Vector{In
                             # 1-2, 1-3, 1-4, 2-3, 3-4..., so we will need to pick gchild as child from root node, and then look
                             node_3 = STs.find_child(AlphaC.simplices, gchild) # a-c
                             node_5 = STs.find_child(node_2, gchild) # b-C
-                            min_1 = min(node_2.birth, node_3.birth, node_5.birth)
-                            if (min_1 < (1.73205 * Ball_radius))
-                                push!(tetrahedrons_or_tri, [sv[1], sv[2], sv[3]])
-                            end
+                            =#
+			    Tetra_tri = (sv[1], sv[2], sv[3])
+			    if !(Tetra_tri in triangles_of_added_tetra)
+                                max_1 = max(node_2.birth, node_3.birth, node_5.birth)
+                                if (max_1 < (1.73205 * Ball_radius))
+                                    push!(tetrahedrons_or_tri, [sv[1], sv[2], sv[3]])
+                                end
+			    end
                         end
-			            if dim <=3 && edge_2_4 && !([sv[2], sv[3], sv[4]] in tetrahedrons_or_tri)
+			if dim <=3 && edge_2_4 && !([sv[2], sv[3], sv[4]] in tetrahedrons_or_tri)
+                            #=
                             node_2 = STs.find_child(AlphaC.simplices, child)
                             node_5 = STs.find_child(node_2, gchild) # b-C
                             node_6 = STs.find_child(node_2, ggchild) # b-d
                             node_3 = STs.find_child(AlphaC.simplices, gchild)
                             node_7 = STs.find_child(node_3, ggchild)
-                            min_1 = min(node_5.birth, node_6.birth, node_7.birth)
-                            if (min_1 < (1.73205 * Ball_radius))
-                                push!(tetrahedrons_or_tri, [sv[2], sv[3], sv[4]])
-                            end
+                            =#
+			    Tetra_tri = (sv[2], sv[3], sv[4])
+			    if !(Tetra_tri in triangles_of_added_tetra)
+                                max_1 = max(node_5.birth, node_6.birth, node_7.birth)
+                                if (max_1 < (1.73205 * Ball_radius))
+                                    push!(tetrahedrons_or_tri, [sv[2], sv[3], sv[4]])
+                                end
+			    end
                         end
-			            if dim <= 3 && edge_1_4 && edge_2_4 && !([sv[1], sv[2], sv[4]] in tetrahedrons_or_tri)
+			if dim <= 3 && edge_1_4 && edge_2_4 && !([sv[1], sv[2], sv[4]] in tetrahedrons_or_tri)
+                            #=
                             node_1 = STs.find_child(AlphaC.simplices, simplices_0)
                             node_2 = STs.find_child(AlphaC.simplices, child)   # 1-2
                             node_4 = STs.find_child(AlphaC.simplices, ggchild) # 1-4
                             node_6 = STs.find_child(node_2, ggchild)           # 2-4
-                            min_1 = min(node_2.birth, node_4.birth, node_6.birth)
-                            if (min_1 < (1.73205 * Ball_radius))
-                                push!(tetrahedrons_or_tri, [sv[1], sv[2], sv[4]])
-                            end
+                            =#
+			    Tetra_tri = (sv[1], sv[2], sv[4])
+			    if !(Tetra_tri in triangles_of_added_tetra)
+                                max_1 = max(node_2.birth, node_4.birth, node_6.birth)
+                                if (max_1 < (1.73205 * Ball_radius))
+                                    push!(tetrahedrons_or_tri, [sv[1], sv[2], sv[4]])
+                                end
+			    end
                         end
-			            if dim <= 3 && edge_1_3 && edge_1_4 && !([sv[1], sv[3], sv[4]] in tetrahedrons_or_tri)
+			if dim <= 3 && edge_1_3 && edge_1_4 && !([sv[1], sv[3], sv[4]] in tetrahedrons_or_tri)
+                            #=
                             node_3 = STs.find_child(AlphaC.simplices, gchild) # 1-3
                             node_4 = STs.find_child(AlphaC.simplices, ggchild) # 1-4
                             node_7 = STs.find_child(node_3, ggchild)           # 3-4
-                            min_1 = min(node_3.birth, node_4.birth, node_7.birth)
-                            if (min_1 < (1.73205 * Ball_radius))
-                                push!(tetrahedrons_or_tri, [sv[1], sv[3], sv[4]])
-                            end
+                            =#
+			    Tetra_tri = (sv[1], sv[3], sv[4])
+			    if !(Tetra_tri in triangles_of_added_tetra)
+                                max_1 = max(node_3.birth, node_4.birth, node_7.birth)
+                                if (max_1 < (1.73205 * Ball_radius))
+                                    push!(tetrahedrons_or_tri, [sv[1], sv[3], sv[4]])
+                                end
+			    end
                         end
                     end
                 end

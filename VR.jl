@@ -119,7 +119,7 @@ function gathersimplices(VietorisRipsC::VRComplex, dim::Integer) :: Vector{Vecto
                     if dim == 3 && edge_1_3 && edge_2_4 && edge_1_4
                         push!(tetrahedrons_or_tri, [simplices_0, child, gchild, ggchild]) # we will add all triangles 
                     else
-			    if dim <=3 && edge_1_3 && !([sv[1], sv[2], sv[3]] in tetrahedrons_or_tri) 
+			if dim <=3 && edge_1_3 && !([sv[1], sv[2], sv[3]] in tetrahedrons_or_tri) 
                             push!(tetrahedrons_or_tri, [sv[1], sv[2], sv[3]])
                         end
 			if dim <=3 && edge_2_4 && !([sv[2], sv[3], sv[4]] in tetrahedrons_or_tri)

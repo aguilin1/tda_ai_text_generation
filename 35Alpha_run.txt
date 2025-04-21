@@ -1,0 +1,1527 @@
+tab_5_matrix_f[1, :] = [-3.4963, 3.8238, 0.46389, -1.9448, -0.13993, -3.5659, -0.23023, -2.5865, -1.6493, 0.79359, -1.4347, 0.11679, -0.9013, -2.5477, -3.4713]
+(93, 93)
+[0.0 6.772775424711867 7.806126014437701 8.651616863471245 8.868286417631145; 6.772775424711867 0.0 4.9500577586652454 6.952702662136574 8.667170316655952; 7.806126014437701 4.9500577586652454 0.0 5.396838995352834 6.612992174987207; 8.651616863471245 6.952702662136574 5.396838995352834 0.0 5.914459216347765; 8.868286417631145 8.667170316655952 6.612992174987207 5.914459216347765 0.0]
+Coliumn-Ranks : [0.0, 6.772775424711867, 7.806126014437701, 8.651616863471245, 8.868286417631145, 7.260377131227001, 8.54993816992671, 9.78521064541975, 8.787285377010127, 10.601995218042687, 10.724417321976052, 11.243478419408293, 12.979589992938028, 10.5739978535134, 14.200005469111623, 12.460863977618086, 11.872927304064488, 11.072058628872952, 11.55936712320243, 12.63605664496642, 10.332368000671481, 10.473791956729377, 9.050528374388026, 10.102709489953673, 9.133005333558062, 9.688769021661113, 7.289065532981579, 7.0287398634748195, 5.600275833546862, 5.526647061048862, 6.333433271271518, 6.264546803619876, 8.255360694229175, 8.354699631064483, 10.413489300644093, 7.375127933533356, 9.740510183001762, 9.09551451214185, 10.664019117527875, 11.19259616667755, 11.33344686973632, 12.03738157623991, 11.782060901633466, 13.106216000071417, 13.990028877933026, 12.728157990954543, 11.61507975870358, 12.930092028448184, 11.867369283666031, 12.842219909701164, 14.031556055252747, 13.467103386959945, 12.415531873352185, 11.354909780258053, 9.032112683830125, 10.076318874234012, 9.322158014669993, 8.981792968744719, 10.03320295252842, 7.843646321666985, 8.020964489230705, 8.117109233090375, 10.264735117595583, 13.688945032105286, 12.972467412998808, 11.890431493953447, 12.351804722837064, 11.712587987179266, 12.943748596155055, 14.377136017531447, 14.16609112354262, 12.510176172576468, 14.506365993380285, 12.662354317945814, 14.399202635715632, 15.684830034437734, 16.341367357542147, 15.04979483100835, 16.09241528254712, 14.467995922805793, 14.16710747136059, 14.97522518107157, 13.935924219429474, 15.091215609509396, 11.984905465400258, 13.383211864729072, 13.373344903198303, 13.176932541110205, 13.34934873398508, 10.969108203103842, 12.615938073223093, 13.033224932195408, 10.715374808526299]
+Rank of R_5 = 93
+Coliumn-Ranks In Row Format: [0.0 6.772775424711867 7.806126014437701 8.651616863471245 8.868286417631145 7.260377131227001 8.54993816992671 9.78521064541975 8.787285377010127 10.601995218042687 10.724417321976052 11.243478419408293 12.979589992938028 10.5739978535134 14.200005469111623 12.460863977618086 11.872927304064488 11.072058628872952 11.55936712320243 12.63605664496642 10.332368000671481 10.473791956729377 9.050528374388026 10.102709489953673 9.133005333558062 9.688769021661113 7.289065532981579 7.0287398634748195 5.600275833546862 5.526647061048862 6.333433271271518 6.264546803619876 8.255360694229175 8.354699631064483 10.413489300644093 7.375127933533356 9.740510183001762 9.09551451214185 10.664019117527875 11.19259616667755 11.33344686973632 12.03738157623991 11.782060901633466 13.106216000071417 13.990028877933026 12.728157990954543 11.61507975870358 12.930092028448184 11.867369283666031 12.842219909701164 14.031556055252747 13.467103386959945 12.415531873352185 11.354909780258053 9.032112683830125 10.076318874234012 9.322158014669993 8.981792968744719 10.03320295252842 7.843646321666985 8.020964489230705 8.117109233090375 10.264735117595583 13.688945032105286 12.972467412998808 11.890431493953447 12.351804722837064 11.712587987179266 12.943748596155055 14.377136017531447 14.16609112354262 12.510176172576468 14.506365993380285 12.662354317945814 14.399202635715632 15.684830034437734 16.341367357542147 15.04979483100835 16.09241528254712 14.467995922805793 14.16710747136059 14.97522518107157 13.935924219429474 15.091215609509396 11.984905465400258 13.383211864729072 13.373344903198303 13.176932541110205 13.34934873398508 10.969108203103842 12.615938073223093 13.033224932195408 10.715374808526299]
+1×93 Matrix{Int64}:
+ 1  6  11  18  20  8  17  29  19  38  41  45  69  37  83  59  53  43  48  62  34  36  23  32  25  27  9  7  3  2  5  4  15  16  35  10  28  24  39  44  46  56  51  71  79  64  49  66  52  65  80  76  58  47  22  31  26  21  30  12  13  14  33  77  68  54  57  50  67  84  81  60  87  63  85  91  93  89  92  86  82  88  78  90  55  75  74  72  73  42  61  70  40
+[2, 3, 30]Processing - ? true1
+[2, 3, 31]Processing - ? true1
+[1, 2, 29, 30]Processing - ? true1
+Processing - [1, 2, 29, 30]
+[1, 2, 29, 31]Processing - ? false1
+Processing - (1, 2, 29)
+[1, 2, 30, 31]Processing - ? true1
+Processing - [1, 2, 30, 31]
+[1, 29, 30, 31]Processing - ? true1
+Processing - [1, 29, 30, 31]
+[30, 31, 60]Processing - ? true1
+[30, 31, 61]Processing - ? true1
+[30, 32, 36]Processing - ? true1
+[30, 36, 61]Processing - ? true1
+[30, 60, 61]Processing - ? true1
+[31, 60, 61]Processing - ? true1
+[32, 34, 36]Processing - ? true1
+[32, 34, 62]Processing - ? true1
+[32, 36, 62]Processing - ? true1
+[2, 3, 4, 6]Processing - ? true1
+Processing - [2, 3, 4, 6]
+[2, 3, 4, 29]Processing - ? false1
+Processing - (2, 3, 4)
+[2, 3, 4, 31]Processing - ? false1
+Processing - (2, 3, 4)
+Processing - (2, 3, 31)
+[2, 3, 6, 30]Processing - ? true1
+Processing - [2, 3, 6, 30]
+[2, 3, 29, 30]Processing - ? true1
+Processing - [2, 3, 29, 30]
+[2, 3, 30, 31]Processing - ? false1
+Processing - (2, 3, 30)
+Processing - (2, 3, 31)
+[2, 3, 30, 32]Processing - ? false1
+Processing - (2, 3, 30)
+[4, 6, 36]Processing - ? true1
+[6, 7, 8]Processing - ? true1
+[6, 7, 9]Processing - ? true1
+[6, 8, 9]Processing - ? true1
+[6, 8, 11]Processing - ? true1
+[2, 6, 30, 32]Processing - ? true1
+Processing - [2, 6, 30, 32]
+[6, 32, 34]Processing - ? true1
+[6, 32, 36]Processing - ? true1
+[6, 34, 36]Processing - ? true1
+[6, 34, 38]Processing - ? true1
+[6, 36, 38]Processing - ? true1
+[2, 27, 28, 29]Processing - ? true1
+Processing - [2, 27, 28, 29]
+[2, 27, 28, 30]Processing - ? false1
+Processing - (2, 27, 28)
+[2, 27, 29, 30]Processing - ? true1
+Processing - [2, 27, 29, 30]
+[2, 28, 29, 30]Processing - ? true1
+Processing - [2, 28, 29, 30]
+[2, 29, 30, 31]Processing - ? true1
+Processing - [2, 29, 30, 31]
+[29, 30, 31, 60]Processing - ? true1
+Processing - [29, 30, 31, 60]
+[29, 30, 31, 61]Processing - ? false1
+Processing - (29, 30, 31)
+Processing - (30, 31, 61)
+[29, 30, 60, 61]Processing - ? true1
+Processing - [29, 30, 60, 61]
+[29, 30, 60, 62]Processing - ? false1
+Processing - (29, 30, 60)
+[29, 30, 61, 62]Processing - ? true1
+Processing - [29, 30, 61, 62]
+[29, 31, 60, 61]Processing - ? true1
+Processing - [29, 31, 60, 61]
+[55, 56, 58]Processing - ? true1
+[29, 55, 58]Processing - ? true1
+[29, 55, 57, 58]Processing - ? true1
+Processing - [29, 55, 57, 58]
+[29, 55, 57, 60]Processing - ? false1
+Processing - (29, 55, 57)
+[29, 57, 58, 59]Processing - ? true1
+Processing - [29, 57, 58, 59]
+[29, 60, 61, 62]Processing - ? true1
+Processing - [29, 60, 61, 62]
+[60, 61, 63]Processing - ? true1
+[30, 31, 60, 61]Processing - ? false1
+Processing - (30, 31, 60)
+Processing - (31, 60, 61)
+Processing - (30, 60, 61)
+Processing - (30, 31, 61)
+[30, 32, 36, 62]Processing - ? false1
+Processing - (30, 32, 36)
+Processing - (32, 36, 62)
+[36, 37, 38]Processing - ? true1
+[36, 37, 39]Processing - ? true1
+[36, 38, 39]Processing - ? true1
+[36, 38, 62]Processing - ? true1
+[30, 36, 61, 62]Processing - ? false1
+Processing - (30, 36, 61)
+[30, 60, 61, 62]Processing - ? false1
+Processing - (30, 60, 61)
+[33, 34, 36]Processing - ? true1
+[33, 34, 38]Processing - ? true1
+[33, 34, 62]Processing - ? true1
+[33, 36, 38]Processing - ? true1
+[33, 38, 62]Processing - ? true1
+[33, 60, 63]Processing - ? true1
+[33, 61, 63]Processing - ? true1
+[32, 33, 34, 36]Processing - ? true1
+Processing - [32, 33, 34, 36]
+[32, 33, 34, 62]Processing - ? false1
+Processing - (32, 33, 34)
+Processing - (33, 34, 62)
+Processing - (32, 34, 62)
+[33, 60, 61]Processing - ? true1
+[33, 60, 62]Processing - ? true1
+[34, 36, 37]Processing - ? true1
+[34, 36, 38]Processing - ? true1
+[34, 36, 39]Processing - ? true1
+[32, 34, 36, 62]Processing - ? false1
+Processing - (32, 34, 36)
+Processing - (32, 36, 62)
+Processing - (32, 34, 62)
+[34, 37, 38]Processing - ? true1
+[34, 37, 39]Processing - ? true1
+[34, 38, 39]Processing - ? true1
+[34, 38, 62]Processing - ? true1
+[3, 4, 6, 36]Processing - ? true1
+Processing - [3, 4, 6, 36]
+[3, 4, 29, 31]Processing - ? true1
+Processing - [3, 4, 29, 31]
+[3, 4, 29, 62]Processing - ? false1
+Processing - (3, 4, 29)
+[3, 4, 31, 36]Processing - ? true1
+Processing - [3, 4, 31, 36]
+[3, 4, 31, 62]Processing - ? false1
+Processing - (3, 4, 31)
+[3, 6, 7, 8]Processing - ? true1
+Processing - [3, 6, 7, 8]
+[3, 6, 30, 32]Processing - ? true1
+Processing - [3, 6, 30, 32]
+[3, 6, 30, 36]Processing - ? false1
+Processing - (3, 6, 30)
+[3, 6, 32, 36]Processing - ? true1
+Processing - [3, 6, 32, 36]
+[7, 8, 9]Processing - ? true1
+[3, 29, 30, 31]Processing - ? true1
+Processing - [3, 29, 30, 31]
+[3, 29, 30, 62]Processing - ? false1
+Processing - (3, 29, 30)
+[3, 30, 31, 32]Processing - ? true1
+Processing - [3, 30, 31, 32]
+[3, 30, 31, 36]Processing - ? false1
+Processing - (3, 30, 31)
+[3, 30, 32, 36]Processing - ? true1
+Processing - [3, 30, 32, 36]
+[3, 30, 36, 62]Processing - ? true1
+Processing - [3, 30, 36, 62]
+[3, 32, 36, 62]Processing - ? true1
+Processing - [3, 32, 36, 62]
+[4, 6, 38, 62]Processing - ? true1
+Processing - [4, 6, 38, 62]
+[4, 29, 31, 62]Processing - ? true1
+Processing - [4, 29, 31, 62]
+[4, 36, 38, 62]Processing - ? true1
+Processing - [4, 36, 38, 62]
+[38, 39, 40]Processing - ? true1
+[38, 39, 42]Processing - ? true1
+[38, 40, 42]Processing - ? true1
+[6, 8, 9, 11]Processing - ? false1
+Processing - (6, 8, 9)
+Processing - (6, 8, 11)
+[6, 30, 32, 36]Processing - ? true1
+Processing - [6, 30, 32, 36]
+[6, 32, 34, 36]Processing - ? false1
+Processing - (6, 32, 34)
+Processing - (32, 34, 36)
+Processing - (6, 34, 36)
+Processing - (6, 32, 36)
+[6, 32, 34, 62]Processing - ? false1
+Processing - (6, 32, 34)
+Processing - (32, 34, 62)
+[6, 34, 36, 37]Processing - ? false1
+Processing - (6, 34, 36)
+Processing - (34, 36, 37)
+[6, 34, 36, 38]Processing - ? false1
+Processing - (6, 34, 36)
+Processing - (34, 36, 38)
+Processing - (6, 36, 38)
+Processing - (6, 34, 38)
+[6, 34, 36, 39]Processing - ? false1
+Processing - (6, 34, 36)
+Processing - (34, 36, 39)
+[6, 34, 36, 62]Processing - ? false1
+Processing - (6, 34, 36)
+[6, 34, 37, 38]Processing - ? true1
+Processing - [6, 34, 37, 38]
+[6, 34, 37, 39]Processing - ? false1
+Processing - (6, 34, 37)
+Processing - (34, 37, 39)
+[6, 34, 37, 62]Processing - ? false1
+Processing - (6, 34, 37)
+[6, 34, 38, 39]Processing - ? false1
+Processing - (6, 34, 38)
+Processing - (34, 38, 39)
+[6, 34, 38, 62]Processing - ? false1
+Processing - (6, 34, 38)
+Processing - (34, 38, 62)
+[37, 38, 40]Processing - ? true1
+[37, 38, 42]Processing - ? true1
+[37, 39, 40]Processing - ? true1
+[37, 39, 42]Processing - ? true1
+[37, 40, 42]Processing - ? true1
+[39, 40, 42]Processing - ? true1
+[39, 40, 74]Processing - ? true1
+[39, 41, 42]Processing - ? true1
+[39, 42, 74]Processing - ? true1
+[41, 42, 43]Processing - ? true1
+[27, 28, 29, 30]Processing - ? true1
+Processing - [27, 28, 29, 30]
+[27, 28, 30, 60]Processing - ? true1
+Processing - [27, 28, 30, 60]
+[27, 28, 31, 60]Processing - ? true1
+Processing - [27, 28, 31, 60]
+[27, 29, 30, 31]Processing - ? true1
+Processing - [27, 29, 30, 31]
+[27, 29, 30, 60]Processing - ? false1
+Processing - (27, 29, 30)
+Processing - (29, 30, 60)
+[27, 29, 30, 61]Processing - ? false1
+Processing - (27, 29, 30)
+Processing - (29, 30, 61)
+[27, 30, 31, 60]Processing - ? true1
+Processing - [27, 30, 31, 60]
+[27, 30, 31, 61]Processing - ? false1
+Processing - (27, 30, 31)
+Processing - (30, 31, 61)
+[27, 30, 60, 61]Processing - ? true1
+Processing - [27, 30, 60, 61]
+[28, 29, 30, 31]Processing - ? true1
+Processing - [28, 29, 30, 31]
+[28, 29, 30, 60]Processing - ? false1
+Processing - (28, 29, 30)
+Processing - (29, 30, 60)
+[28, 29, 30, 61]Processing - ? false1
+Processing - (28, 29, 30)
+Processing - (29, 30, 61)
+[28, 29, 55, 58]Processing - ? true1
+Processing - [28, 29, 55, 58]
+[28, 29, 55, 60]Processing - ? false1
+Processing - (28, 29, 55)
+[28, 30, 31, 60]Processing - ? true1
+Processing - [28, 30, 31, 60]
+[28, 30, 31, 61]Processing - ? false1
+Processing - (28, 30, 31)
+Processing - (30, 31, 61)
+[28, 30, 60, 61]Processing - ? true1
+Processing - [28, 30, 60, 61]
+[28, 55, 57, 58]Processing - ? true1
+Processing - [28, 55, 57, 58]
+[28, 55, 57, 60]Processing - ? false1
+Processing - (28, 55, 57)
+[10, 11, 14]Processing - ? true1
+[8, 9, 10, 11]Processing - ? true1
+Processing - [8, 9, 10, 11]
+[36, 37, 38, 68]Processing - ? false1
+Processing - (36, 37, 38)
+[36, 38, 40, 68]Processing - ? true1
+Processing - [36, 38, 40, 68]
+[40, 42, 43]Processing - ? true1
+[40, 42, 74]Processing - ? true1
+[40, 43, 74]Processing - ? true1
+[38, 39, 40, 68]Processing - ? false1
+Processing - (38, 39, 40)
+[38, 39, 42, 68]Processing - ? false1
+Processing - (38, 39, 42)
+[42, 43, 44]Processing - ? true1
+[42, 43, 45]Processing - ? true1
+[42, 43, 47]Processing - ? true1
+[42, 43, 49]Processing - ? true1
+[42, 43, 74]Processing - ? true1
+[42, 44, 45]Processing - ? true1
+[42, 44, 47]Processing - ? true1
+[42, 44, 49]Processing - ? true1
+[42, 45, 47]Processing - ? true1
+[42, 45, 49]Processing - ? true1
+[42, 47, 49]Processing - ? true1
+[69, 70, 73]Processing - ? true1
+[9, 10, 11, 14]Processing - ? true1
+Processing - [9, 10, 11, 14]
+[9, 10, 12, 13]Processing - ? true1
+Processing - [9, 10, 12, 13]
+[9, 10, 12, 14]Processing - ? false1
+Processing - (9, 10, 12)
+[9, 10, 13, 14]Processing - ? true1
+Processing - [9, 10, 13, 14]
+[17, 18, 20]Processing - ? true1
+[11, 41, 42, 43]Processing - ? true1
+Processing - [11, 41, 42, 43]
+[43, 44, 45]Processing - ? true1
+[43, 44, 47]Processing - ? true1
+[43, 44, 49]Processing - ? true1
+[43, 45, 47]Processing - ? true1
+[43, 45, 49]Processing - ? true1
+[43, 47, 49]Processing - ? true1
+[34, 35, 36, 37]Processing - ? true1
+Processing - [34, 35, 36, 37]
+[34, 35, 36, 38]Processing - ? false1
+Processing - (34, 35, 36)
+Processing - (34, 36, 38)
+[34, 35, 37, 38]Processing - ? true1
+Processing - [34, 35, 37, 38]
+[34, 35, 37, 62]Processing - ? false1
+Processing - (34, 35, 37)
+[34, 35, 38, 62]Processing - ? true1
+Processing - [34, 35, 38, 62]
+[34, 36, 37, 38]Processing - ? false1
+Processing - (34, 36, 37)
+Processing - (36, 37, 38)
+Processing - (34, 37, 38)
+Processing - (34, 36, 38)
+[34, 36, 37, 39]Processing - ? false1
+Processing - (34, 36, 37)
+Processing - (36, 37, 39)
+Processing - (34, 37, 39)
+Processing - (34, 36, 39)
+[34, 36, 37, 62]Processing - ? false1
+Processing - (34, 36, 37)
+[34, 36, 37, 68]Processing - ? false1
+Processing - (34, 36, 37)
+[34, 36, 38, 39]Processing - ? false1
+Processing - (34, 36, 38)
+Processing - (36, 38, 39)
+Processing - (34, 38, 39)
+Processing - (34, 36, 39)
+[34, 36, 38, 62]Processing - ? false1
+Processing - (34, 36, 38)
+Processing - (36, 38, 62)
+Processing - (34, 38, 62)
+[34, 36, 38, 68]Processing - ? false1
+Processing - (34, 36, 38)
+[34, 36, 39, 68]Processing - ? false1
+Processing - (34, 36, 39)
+[34, 37, 38, 39]Processing - ? false1
+Processing - (34, 37, 38)
+Processing - (34, 38, 39)
+Processing - (34, 37, 39)
+[34, 37, 38, 62]Processing - ? false1
+Processing - (34, 37, 38)
+Processing - (34, 38, 62)
+[34, 37, 38, 68]Processing - ? false1
+Processing - (34, 37, 38)
+[34, 38, 68, 69]Processing - ? true1
+Processing - [34, 38, 68, 69]
+[34, 39, 68, 69]Processing - ? true1
+Processing - [34, 39, 68, 69]
+[34, 65, 68, 69]Processing - ? true1
+Processing - [34, 65, 68, 69]
+[37, 38, 39, 68]Processing - ? true1
+Processing - [37, 38, 39, 68]
+[37, 38, 40, 68]Processing - ? false1
+Processing - (37, 38, 40)
+[39, 40, 42, 74]Processing - ? false1
+Processing - (39, 40, 42)
+Processing - (40, 42, 74)
+Processing - (39, 42, 74)
+Processing - (39, 40, 74)
+[39, 41, 42, 74]Processing - ? false1
+Processing - (39, 41, 42)
+Processing - (39, 42, 74)
+[39, 41, 71, 74]Processing - ? true1
+Processing - [39, 41, 71, 74]
+[41, 42, 43, 74]Processing - ? false1
+Processing - (41, 42, 43)
+Processing - (42, 43, 74)
+[41, 42, 68, 74]Processing - ? true1
+Processing - [41, 42, 68, 74]
+[72, 74, 75]Processing - ? true1
+[10, 11, 14, 17]Processing - ? false1
+Processing - (10, 11, 14)
+[16, 17, 18]Processing - ? true1
+[16, 17, 20]Processing - ? true1
+[16, 18, 19]Processing - ? true1
+[16, 18, 20]Processing - ? true1
+[16, 19, 20]Processing - ? true1
+[14, 15, 16, 20]Processing - ? true1
+Processing - [14, 15, 16, 20]
+[14, 15, 18, 20]Processing - ? true1
+Processing - [14, 15, 18, 20]
+[14, 16, 17, 18]Processing - ? true1
+Processing - [14, 16, 17, 18]
+[14, 16, 17, 20]Processing - ? false1
+Processing - (14, 16, 17)
+Processing - (16, 17, 20)
+[14, 16, 18, 20]Processing - ? true1
+Processing - [14, 16, 18, 20]
+[14, 17, 18, 20]Processing - ? true1
+Processing - [14, 17, 18, 20]
+[18, 19, 20]Processing - ? true1
+[18, 19, 21]Processing - ? true1
+[18, 19, 52]Processing - ? true1
+[18, 20, 21]Processing - ? true1
+[14, 18, 20, 49]Processing - ? true1
+Processing - [14, 18, 20, 49]
+[18, 48, 49]Processing - ? true1
+[18, 48, 50]Processing - ? true1
+[18, 48, 53]Processing - ? true1
+[18, 49, 50]Processing - ? true1
+[18, 49, 53]Processing - ? true1
+[18, 50, 52]Processing - ? true1
+[18, 50, 53]Processing - ? true1
+[18, 52, 53]Processing - ? true1
+[14, 43, 44, 45]Processing - ? true1
+Processing - [14, 43, 44, 45]
+[14, 43, 44, 49]Processing - ? false1
+Processing - (14, 43, 44)
+Processing - (43, 44, 49)
+[14, 43, 45, 47]Processing - ? true1
+Processing - [14, 43, 45, 47]
+[14, 43, 45, 49]Processing - ? false1
+Processing - (14, 43, 45)
+Processing - (43, 45, 49)
+[44, 45, 46]Processing - ? true1
+[14, 44, 45, 47]Processing - ? true1
+Processing - [14, 44, 45, 47]
+[14, 44, 45, 49]Processing - ? false1
+Processing - (14, 44, 45)
+[44, 46, 47]Processing - ? true1
+[44, 46, 49]Processing - ? true1
+[14, 44, 47, 49]Processing - ? true1
+Processing - [14, 44, 47, 49]
+[45, 46, 47]Processing - ? true1
+[45, 46, 49]Processing - ? true1
+[45, 47, 48]Processing - ? true1
+[14, 45, 47, 49]Processing - ? true1
+Processing - [14, 45, 47, 49]
+[45, 48, 49]Processing - ? true1
+[47, 48, 49]Processing - ? true1
+[47, 48, 50]Processing - ? true1
+[47, 49, 50]Processing - ? true1
+[47, 49, 78]Processing - ? true1
+[47, 50, 78]Processing - ? true1
+[49, 50, 53]Processing - ? true1
+[49, 50, 78]Processing - ? true1
+[16, 17, 18, 21]Processing - ? false1
+Processing - (16, 17, 18)
+[16, 17, 19, 21]Processing - ? true1
+Processing - [16, 17, 19, 21]
+[16, 17, 20, 21]Processing - ? false1
+Processing - (16, 17, 20)
+[16, 18, 19, 20]Processing - ? false1
+Processing - (16, 18, 19)
+Processing - (18, 19, 20)
+Processing - (16, 19, 20)
+Processing - (16, 18, 20)
+[16, 18, 19, 21]Processing - ? false1
+Processing - (16, 18, 19)
+Processing - (18, 19, 21)
+[16, 18, 20, 21]Processing - ? false1
+Processing - (16, 18, 20)
+Processing - (18, 20, 21)
+[16, 19, 20, 21]Processing - ? false1
+Processing - (16, 19, 20)
+[19, 21, 22]Processing - ? true1
+[21, 22, 23]Processing - ? true1
+[21, 22, 24]Processing - ? true1
+[21, 23, 24]Processing - ? true1
+[17, 18, 19, 20]Processing - ? true1
+Processing - [17, 18, 19, 20]
+[17, 18, 19, 21]Processing - ? false1
+Processing - (17, 18, 19)
+Processing - (18, 19, 21)
+[17, 18, 20, 21]Processing - ? false1
+Processing - (17, 18, 20)
+Processing - (18, 20, 21)
+[17, 19, 20, 21]Processing - ? true1
+Processing - [17, 19, 20, 21]
+[43, 44, 45, 46]Processing - ? false1
+Processing - (43, 44, 45)
+Processing - (44, 45, 46)
+[43, 44, 45, 47]Processing - ? false1
+Processing - (43, 44, 45)
+Processing - (43, 45, 47)
+Processing - (43, 44, 47)
+[43, 44, 45, 49]Processing - ? false1
+Processing - (43, 44, 45)
+Processing - (43, 45, 49)
+Processing - (43, 44, 49)
+[43, 44, 46, 47]Processing - ? true1
+Processing - [43, 44, 46, 47]
+[43, 44, 46, 49]Processing - ? false1
+Processing - (43, 44, 46)
+Processing - (44, 46, 49)
+Processing - (43, 44, 49)
+[43, 44, 47, 49]Processing - ? false1
+Processing - (43, 44, 47)
+Processing - (43, 47, 49)
+Processing - (43, 44, 49)
+[43, 45, 46, 47]Processing - ? true1
+Processing - [43, 45, 46, 47]
+[43, 45, 46, 49]Processing - ? false1
+Processing - (43, 45, 46)
+Processing - (45, 46, 49)
+Processing - (43, 45, 49)
+[43, 45, 47, 49]Processing - ? false1
+Processing - (43, 45, 47)
+Processing - (43, 47, 49)
+Processing - (43, 45, 49)
+[43, 72, 74, 75]Processing - ? true1
+Processing - [43, 72, 74, 75]
+[75, 76, 77]Processing - ? true1
+[75, 76, 78]Processing - ? true1
+[75, 76, 79]Processing - ? true1
+[75, 77, 78]Processing - ? true1
+[75, 77, 79]Processing - ? true1
+[75, 77, 80]Processing - ? true1
+[75, 78, 79]Processing - ? true1
+[75, 78, 80]Processing - ? true1
+[75, 79, 80]Processing - ? true1
+[42, 43, 44, 45]Processing - ? false1
+Processing - (42, 43, 44)
+Processing - (43, 44, 45)
+Processing - (42, 44, 45)
+Processing - (42, 43, 45)
+[42, 43, 44, 49]Processing - ? false1
+Processing - (42, 43, 44)
+Processing - (43, 44, 49)
+Processing - (42, 44, 49)
+Processing - (42, 43, 49)
+[42, 43, 45, 47]Processing - ? false1
+Processing - (42, 43, 45)
+Processing - (43, 45, 47)
+Processing - (42, 45, 47)
+Processing - (42, 43, 47)
+[42, 43, 45, 49]Processing - ? false1
+Processing - (42, 43, 45)
+Processing - (43, 45, 49)
+Processing - (42, 45, 49)
+Processing - (42, 43, 49)
+[42, 43, 47, 49]Processing - ? false1
+Processing - (42, 43, 47)
+Processing - (43, 47, 49)
+Processing - (42, 47, 49)
+Processing - (42, 43, 49)
+[42, 44, 45, 47]Processing - ? false1
+Processing - (42, 44, 45)
+Processing - (42, 45, 47)
+Processing - (42, 44, 47)
+[42, 44, 45, 49]Processing - ? false1
+Processing - (42, 44, 45)
+Processing - (42, 45, 49)
+Processing - (42, 44, 49)
+[42, 44, 47, 49]Processing - ? false1
+Processing - (42, 44, 47)
+Processing - (42, 47, 49)
+Processing - (42, 44, 49)
+[42, 45, 47, 49]Processing - ? false1
+Processing - (42, 45, 47)
+Processing - (42, 47, 49)
+Processing - (42, 45, 49)
+[15, 16, 17, 19]Processing - ? true1
+Processing - [15, 16, 17, 19]
+[15, 16, 18, 19]Processing - ? true1
+Processing - [15, 16, 18, 19]
+[15, 16, 18, 20]Processing - ? false1
+Processing - (15, 16, 18)
+Processing - (16, 18, 20)
+[15, 16, 19, 20]Processing - ? true1
+Processing - [15, 16, 19, 20]
+[15, 17, 18, 19]Processing - ? true1
+Processing - [15, 17, 18, 19]
+[15, 17, 18, 20]Processing - ? false1
+Processing - (15, 17, 18)
+Processing - (17, 18, 20)
+[15, 17, 19, 20]Processing - ? true1
+Processing - [15, 17, 19, 20]
+[15, 18, 19, 20]Processing - ? true1
+Processing - [15, 18, 19, 20]
+[15, 18, 20, 48]Processing - ? true1
+Processing - [15, 18, 20, 48]
+[48, 49, 50]Processing - ? true1
+[48, 49, 53]Processing - ? true1
+[48, 50, 53]Processing - ? true1
+[48, 50, 82]Processing - ? true1
+[48, 53, 82]Processing - ? true1
+[18, 19, 20, 21]Processing - ? false1
+Processing - (18, 19, 20)
+Processing - (18, 20, 21)
+Processing - (18, 19, 21)
+[18, 19, 21, 22]Processing - ? false1
+Processing - (18, 19, 21)
+Processing - (19, 21, 22)
+[18, 19, 21, 23]Processing - ? false1
+Processing - (18, 19, 21)
+[18, 21, 22, 23]Processing - ? true1
+Processing - [18, 21, 22, 23]
+[22, 23, 24]Processing - ? true1
+[22, 23, 25]Processing - ? true1
+[22, 23, 27]Processing - ? true1
+[22, 24, 25]Processing - ? true1
+[22, 24, 26]Processing - ? true1
+[22, 24, 27]Processing - ? true1
+[22, 25, 26]Processing - ? true1
+[22, 25, 27]Processing - ? true1
+[22, 26, 27]Processing - ? true1
+[23, 24, 25]Processing - ? true1
+[23, 24, 27]Processing - ? true1
+[23, 25, 27]Processing - ? true1
+[23, 25, 28]Processing - ? true1
+[23, 25, 29]Processing - ? true1
+[23, 25, 58]Processing - ? true1
+[23, 27, 28]Processing - ? true1
+[23, 27, 29]Processing - ? true1
+[23, 28, 29]Processing - ? true1
+[23, 55, 58]Processing - ? true1
+[18, 47, 48, 49]Processing - ? true1
+Processing - [18, 47, 48, 49]
+[18, 47, 48, 50]Processing - ? false1
+Processing - (18, 47, 48)
+Processing - (47, 48, 50)
+Processing - (18, 48, 50)
+[18, 47, 49, 50]Processing - ? true1
+Processing - [18, 47, 49, 50]
+[18, 47, 49, 53]Processing - ? false1
+Processing - (18, 47, 49)
+Processing - (18, 49, 53)
+[18, 47, 50, 53]Processing - ? true1
+Processing - [18, 47, 50, 53]
+[18, 48, 49, 50]Processing - ? false1
+Processing - (18, 48, 49)
+Processing - (48, 49, 50)
+Processing - (18, 49, 50)
+Processing - (18, 48, 50)
+[18, 48, 49, 53]Processing - ? false1
+Processing - (18, 48, 49)
+Processing - (48, 49, 53)
+Processing - (18, 49, 53)
+Processing - (18, 48, 53)
+[18, 48, 50, 53]Processing - ? false1
+Processing - (18, 48, 50)
+Processing - (48, 50, 53)
+Processing - (18, 50, 53)
+Processing - (18, 48, 53)
+[18, 49, 50, 53]Processing - ? false1
+Processing - (18, 49, 50)
+Processing - (49, 50, 53)
+Processing - (18, 50, 53)
+Processing - (18, 49, 53)
+[50, 51, 52]Processing - ? true1
+[50, 51, 53]Processing - ? true1
+[18, 50, 52, 53]Processing - ? false1
+Processing - (18, 50, 52)
+Processing - (18, 52, 53)
+Processing - (18, 50, 53)
+[50, 52, 56]Processing - ? true1
+[50, 53, 56]Processing - ? true1
+[50, 53, 82]Processing - ? true1
+[50, 78, 82]Processing - ? true1
+[52, 53, 56]Processing - ? true1
+[53, 54, 56]Processing - ? true1
+[53, 55, 56]Processing - ? true1
+[53, 55, 85]Processing - ? true1
+[53, 82, 84]Processing - ? true1
+[53, 82, 85]Processing - ? true1
+[44, 45, 46, 47]Processing - ? false1
+Processing - (44, 45, 46)
+Processing - (45, 46, 47)
+Processing - (44, 46, 47)
+[44, 45, 46, 49]Processing - ? false1
+Processing - (44, 45, 46)
+Processing - (45, 46, 49)
+Processing - (44, 46, 49)
+[44, 45, 47, 49]Processing - ? true1
+Processing - [44, 45, 47, 49]
+[44, 46, 47, 78]Processing - ? false1
+Processing - (44, 46, 47)
+[44, 47, 49, 78]Processing - ? true1
+Processing - [44, 47, 49, 78]
+[44, 47, 78, 79]Processing - ? true1
+Processing - [44, 47, 78, 79]
+[44, 72, 74, 75]Processing - ? true1
+Processing - [44, 72, 74, 75]
+[44, 75, 76, 77]Processing - ? true1
+Processing - [44, 75, 76, 77]
+[44, 75, 76, 78]Processing - ? false1
+Processing - (44, 75, 76)
+Processing - (75, 76, 78)
+[44, 75, 76, 79]Processing - ? false1
+Processing - (44, 75, 76)
+Processing - (75, 76, 79)
+[44, 75, 77, 78]Processing - ? true1
+Processing - [44, 75, 77, 78]
+[44, 75, 77, 79]Processing - ? false1
+Processing - (44, 75, 77)
+Processing - (75, 77, 79)
+[44, 75, 78, 79]Processing - ? true1
+Processing - [44, 75, 78, 79]
+[44, 76, 77, 78]Processing - ? true1
+Processing - [44, 76, 77, 78]
+[44, 77, 78, 79]Processing - ? true1
+Processing - [44, 77, 78, 79]
+[77, 78, 80]Processing - ? true1
+[77, 78, 82]Processing - ? true1
+[77, 79, 80]Processing - ? true1
+[77, 80, 82]Processing - ? true1
+[78, 79, 80]Processing - ? true1
+[78, 80, 81]Processing - ? true1
+[78, 80, 82]Processing - ? true1
+[78, 81, 82]Processing - ? true1
+[45, 46, 47, 49]Processing - ? false1
+Processing - (45, 46, 47)
+Processing - (45, 46, 49)
+[45, 47, 48, 49]Processing - ? false1
+Processing - (45, 47, 48)
+Processing - (47, 48, 49)
+Processing - (45, 48, 49)
+[47, 48, 49, 50]Processing - ? false1
+Processing - (47, 48, 49)
+Processing - (48, 49, 50)
+Processing - (47, 49, 50)
+Processing - (47, 48, 50)
+[47, 48, 49, 53]Processing - ? false1
+Processing - (47, 48, 49)
+Processing - (48, 49, 53)
+[47, 48, 50, 53]Processing - ? false1
+Processing - (47, 48, 50)
+Processing - (48, 50, 53)
+[47, 48, 50, 78]Processing - ? false1
+Processing - (47, 48, 50)
+Processing - (47, 50, 78)
+[47, 48, 50, 82]Processing - ? false1
+Processing - (47, 48, 50)
+Processing - (48, 50, 82)
+[47, 48, 53, 82]Processing - ? true1
+Processing - [47, 48, 53, 82]
+[47, 49, 50, 53]Processing - ? false1
+Processing - (47, 49, 50)
+Processing - (49, 50, 53)
+[47, 49, 50, 78]Processing - ? false1
+Processing - (47, 49, 50)
+Processing - (49, 50, 78)
+Processing - (47, 50, 78)
+Processing - (47, 49, 78)
+[47, 49, 51, 78]Processing - ? true1
+Processing - [47, 49, 51, 78]
+[47, 49, 53, 54]Processing - ? true1
+Processing - [47, 49, 53, 54]
+[47, 50, 51, 53]Processing - ? true1
+Processing - [47, 50, 51, 53]
+[47, 50, 51, 78]Processing - ? false1
+Processing - (47, 50, 51)
+Processing - (47, 50, 78)
+[47, 50, 53, 54]Processing - ? true1
+Processing - [47, 50, 53, 54]
+[47, 50, 53, 78]Processing - ? false1
+Processing - (47, 50, 53)
+Processing - (47, 50, 78)
+[47, 50, 53, 82]Processing - ? false1
+Processing - (47, 50, 53)
+Processing - (50, 53, 82)
+[47, 50, 53, 85]Processing - ? false1
+Processing - (47, 50, 53)
+[47, 50, 54, 85]Processing - ? true1
+Processing - [47, 50, 54, 85]
+[47, 50, 78, 80]Processing - ? false1
+Processing - (47, 50, 78)
+[47, 50, 78, 82]Processing - ? false1
+Processing - (47, 50, 78)
+Processing - (50, 78, 82)
+[51, 52, 53]Processing - ? true1
+[47, 51, 53, 78]Processing - ? true1
+Processing - [47, 51, 53, 78]
+[47, 53, 54, 85]Processing - ? true1
+Processing - [47, 53, 54, 85]
+[47, 53, 78, 82]Processing - ? true1
+Processing - [47, 53, 78, 82]
+[47, 53, 82, 85]Processing - ? true1
+Processing - [47, 53, 82, 85]
+[54, 56, 58]Processing - ? true1
+[47, 78, 79, 82]Processing - ? true1
+Processing - [47, 78, 79, 82]
+[47, 78, 80, 82]Processing - ? true1
+Processing - [47, 78, 80, 82]
+[80, 81, 82]Processing - ? true1
+[82, 83, 84]Processing - ? true1
+[85, 86, 91]Processing - ? true1
+[85, 90, 91]Processing - ? true1
+[49, 50, 53, 54]Processing - ? false1
+Processing - (49, 50, 53)
+[49, 50, 53, 78]Processing - ? false1
+Processing - (49, 50, 53)
+Processing - (49, 50, 78)
+[49, 50, 53, 81]Processing - ? false1
+Processing - (49, 50, 53)
+[49, 50, 53, 82]Processing - ? false1
+Processing - (49, 50, 53)
+Processing - (50, 53, 82)
+[49, 50, 54, 81]Processing - ? true1
+Processing - [49, 50, 54, 81]
+[49, 50, 78, 80]Processing - ? false1
+Processing - (49, 50, 78)
+[49, 50, 78, 82]Processing - ? false1
+Processing - (49, 50, 78)
+Processing - (50, 78, 82)
+[49, 50, 80, 81]Processing - ? true1
+Processing - [49, 50, 80, 81]
+[49, 50, 80, 82]Processing - ? false1
+Processing - (49, 50, 80)
+[49, 50, 81, 82]Processing - ? true1
+Processing - [49, 50, 81, 82]
+[49, 51, 53, 78]Processing - ? true1
+Processing - [49, 51, 53, 78]
+[49, 53, 54, 81]Processing - ? true1
+Processing - [49, 53, 54, 81]
+[49, 53, 78, 81]Processing - ? true1
+Processing - [49, 53, 78, 81]
+[49, 53, 81, 82]Processing - ? true1
+Processing - [49, 53, 81, 82]
+[49, 78, 79, 81]Processing - ? true1
+Processing - [49, 78, 79, 81]
+[49, 78, 80, 81]Processing - ? true1
+Processing - [49, 78, 80, 81]
+[49, 78, 81, 82]Processing - ? true1
+Processing - [49, 78, 81, 82]
+[49, 79, 80, 81]Processing - ? true1
+Processing - [49, 79, 80, 81]
+[49, 79, 81, 82]Processing - ? true1
+Processing - [49, 79, 81, 82]
+[49, 80, 81, 82]Processing - ? true1
+Processing - [49, 80, 81, 82]
+[81, 82, 84]Processing - ? true1
+[81, 82, 85]Processing - ? true1
+[19, 21, 22, 24]Processing - ? false1
+Processing - (19, 21, 22)
+Processing - (21, 22, 24)
+[19, 21, 23, 24]Processing - ? true1
+Processing - [19, 21, 23, 24]
+[19, 22, 23, 24]Processing - ? true1
+Processing - [19, 22, 23, 24]
+[24, 25, 26]Processing - ? true1
+[24, 25, 27]Processing - ? true1
+[24, 26, 27]Processing - ? true1
+[48, 49, 50, 53]Processing - ? false1
+Processing - (48, 49, 50)
+Processing - (49, 50, 53)
+Processing - (48, 50, 53)
+Processing - (48, 49, 53)
+[48, 49, 50, 78]Processing - ? false1
+Processing - (48, 49, 50)
+Processing - (49, 50, 78)
+[48, 49, 50, 81]Processing - ? false1
+Processing - (48, 49, 50)
+Processing - (49, 50, 81)
+[48, 49, 53, 81]Processing - ? false1
+Processing - (48, 49, 53)
+Processing - (49, 53, 81)
+[48, 49, 78, 81]Processing - ? true1
+Processing - [48, 49, 78, 81]
+[48, 50, 53, 78]Processing - ? false1
+Processing - (48, 50, 53)
+[48, 50, 53, 81]Processing - ? false1
+Processing - (48, 50, 53)
+[48, 50, 53, 82]Processing - ? false1
+Processing - (48, 50, 53)
+Processing - (50, 53, 82)
+Processing - (48, 53, 82)
+Processing - (48, 50, 82)
+[48, 50, 78, 81]Processing - ? true1
+Processing - [48, 50, 78, 81]
+[48, 50, 78, 82]Processing - ? false1
+Processing - (48, 50, 78)
+Processing - (50, 78, 82)
+Processing - (48, 50, 82)
+[48, 50, 81, 82]Processing - ? true1
+Processing - [48, 50, 81, 82]
+[48, 53, 78, 81]Processing - ? true1
+Processing - [48, 53, 78, 81]
+[48, 53, 78, 82]Processing - ? false1
+Processing - (48, 53, 78)
+Processing - (48, 53, 82)
+[48, 53, 81, 82]Processing - ? true1
+Processing - [48, 53, 81, 82]
+[48, 78, 81, 82]Processing - ? true1
+Processing - [48, 78, 81, 82]
+[21, 22, 23, 24]Processing - ? false1
+Processing - (21, 22, 23)
+Processing - (22, 23, 24)
+Processing - (21, 23, 24)
+Processing - (21, 22, 24)
+[21, 22, 23, 27]Processing - ? false1
+Processing - (21, 22, 23)
+Processing - (22, 23, 27)
+[21, 22, 24, 27]Processing - ? false1
+Processing - (21, 22, 24)
+Processing - (22, 24, 27)
+[21, 23, 24, 27]Processing - ? false1
+Processing - (21, 23, 24)
+Processing - (23, 24, 27)
+[22, 23, 24, 25]Processing - ? false1
+Processing - (22, 23, 24)
+Processing - (23, 24, 25)
+Processing - (22, 24, 25)
+Processing - (22, 23, 25)
+[22, 23, 24, 26]Processing - ? false1
+Processing - (22, 23, 24)
+Processing - (22, 24, 26)
+[22, 23, 25, 26]Processing - ? false1
+Processing - (22, 23, 25)
+Processing - (22, 25, 26)
+[22, 23, 25, 27]Processing - ? false1
+Processing - (22, 23, 25)
+Processing - (23, 25, 27)
+Processing - (22, 25, 27)
+Processing - (22, 23, 27)
+[22, 23, 25, 28]Processing - ? false1
+Processing - (22, 23, 25)
+Processing - (23, 25, 28)
+[22, 23, 26, 27]Processing - ? true1
+Processing - [22, 23, 26, 27]
+[22, 23, 27, 28]Processing - ? false1
+Processing - (22, 23, 27)
+Processing - (23, 27, 28)
+[22, 24, 25, 26]Processing - ? false1
+Processing - (22, 24, 25)
+Processing - (24, 25, 26)
+Processing - (22, 25, 26)
+Processing - (22, 24, 26)
+[22, 24, 25, 27]Processing - ? false1
+Processing - (22, 24, 25)
+Processing - (24, 25, 27)
+Processing - (22, 25, 27)
+Processing - (22, 24, 27)
+[22, 24, 25, 28]Processing - ? false1
+Processing - (22, 24, 25)
+[22, 24, 26, 27]Processing - ? false1
+Processing - (22, 24, 26)
+Processing - (24, 26, 27)
+Processing - (22, 26, 27)
+Processing - (22, 24, 27)
+[22, 24, 26, 28]Processing - ? false1
+Processing - (22, 24, 26)
+[22, 25, 26, 27]Processing - ? false1
+Processing - (22, 25, 26)
+Processing - (22, 26, 27)
+Processing - (22, 25, 27)
+[22, 25, 26, 28]Processing - ? false1
+Processing - (22, 25, 26)
+[22, 25, 27, 28]Processing - ? false1
+Processing - (22, 25, 27)
+[25, 27, 29]Processing - ? true1
+[25, 28, 29]Processing - ? true1
+[25, 57, 58]Processing - ? true1
+[22, 26, 27, 28]Processing - ? false1
+Processing - (22, 26, 27)
+[23, 24, 25, 26]Processing - ? false1
+Processing - (23, 24, 25)
+Processing - (24, 25, 26)
+[23, 24, 25, 27]Processing - ? false1
+Processing - (23, 24, 25)
+Processing - (24, 25, 27)
+Processing - (23, 25, 27)
+Processing - (23, 24, 27)
+[23, 24, 25, 28]Processing - ? false1
+Processing - (23, 24, 25)
+Processing - (23, 25, 28)
+[23, 24, 26, 27]Processing - ? true1
+Processing - [23, 24, 26, 27]
+[23, 24, 26, 28]Processing - ? false1
+Processing - (23, 24, 26)
+[23, 52, 53]Processing - ? true1
+[23, 25, 26, 27]Processing - ? true1
+Processing - [23, 25, 26, 27]
+[23, 25, 26, 28]Processing - ? false1
+Processing - (23, 25, 26)
+Processing - (23, 25, 28)
+[23, 25, 26, 57]Processing - ? false1
+Processing - (23, 25, 26)
+[23, 25, 26, 58]Processing - ? false1
+Processing - (23, 25, 26)
+Processing - (23, 25, 58)
+[23, 25, 27, 28]Processing - ? false1
+Processing - (23, 25, 27)
+Processing - (23, 27, 28)
+Processing - (23, 25, 28)
+[23, 25, 27, 29]Processing - ? false1
+Processing - (23, 25, 27)
+Processing - (25, 27, 29)
+Processing - (23, 27, 29)
+Processing - (23, 25, 29)
+[23, 25, 27, 57]Processing - ? false1
+Processing - (23, 25, 27)
+[23, 25, 27, 58]Processing - ? false1
+Processing - (23, 25, 27)
+Processing - (23, 25, 58)
+[23, 25, 28, 29]Processing - ? false1
+Processing - (23, 25, 28)
+Processing - (25, 28, 29)
+Processing - (23, 28, 29)
+Processing - (23, 25, 29)
+[23, 25, 28, 58]Processing - ? false1
+Processing - (23, 25, 28)
+Processing - (23, 25, 58)
+[23, 25, 29, 57]Processing - ? false1
+Processing - (23, 25, 29)
+[23, 25, 29, 58]Processing - ? false1
+Processing - (23, 25, 29)
+Processing - (23, 25, 58)
+[23, 25, 57, 58]Processing - ? true1
+Processing - [23, 25, 57, 58]
+[23, 26, 27, 28]Processing - ? true1
+Processing - [23, 26, 27, 28]
+[23, 26, 27, 58]Processing - ? false1
+Processing - (23, 26, 27)
+[23, 26, 28, 57]Processing - ? true1
+Processing - [23, 26, 28, 57]
+[23, 26, 57, 58]Processing - ? true1
+Processing - [23, 26, 57, 58]
+[23, 27, 28, 29]Processing - ? false1
+Processing - (23, 27, 28)
+Processing - (27, 28, 29)
+Processing - (23, 28, 29)
+Processing - (23, 27, 29)
+[23, 27, 28, 58]Processing - ? false1
+Processing - (23, 27, 28)
+[23, 27, 29, 57]Processing - ? false1
+Processing - (23, 27, 29)
+[23, 28, 29, 55]Processing - ? false1
+Processing - (23, 28, 29)
+Processing - (28, 29, 55)
+[23, 28, 55, 58]Processing - ? true1
+Processing - [23, 28, 55, 58]
+[23, 29, 55, 58]Processing - ? true1
+Processing - [23, 29, 55, 58]
+[23, 53, 55]Processing - ? true1
+[23, 52, 53, 58]Processing - ? false1
+Processing - (23, 52, 53)
+[23, 52, 56, 58]Processing - ? true1
+Processing - [23, 52, 56, 58]
+[23, 53, 55, 56]Processing - ? false1
+Processing - (23, 53, 55)
+Processing - (53, 55, 56)
+[23, 53, 55, 58]Processing - ? false1
+Processing - (23, 53, 55)
+Processing - (23, 55, 58)
+[23, 53, 56, 58]Processing - ? true1
+Processing - [23, 53, 56, 58]
+[23, 55, 56, 58]Processing - ? true1
+Processing - [23, 55, 56, 58]
+[23, 55, 57, 58]Processing - ? true1
+Processing - [23, 55, 57, 58]
+[50, 53, 55]Processing - ? true1
+[50, 51, 53, 78]Processing - ? false1
+Processing - (50, 51, 53)
+[50, 51, 53, 84]Processing - ? false1
+Processing - (50, 51, 53)
+[50, 53, 54, 55]Processing - ? true1
+Processing - [50, 53, 54, 55]
+[50, 53, 54, 81]Processing - ? false1
+Processing - (50, 53, 54)
+[50, 53, 54, 85]Processing - ? false1
+Processing - (50, 53, 54)
+[50, 53, 55, 56]Processing - ? false1
+Processing - (50, 53, 55)
+Processing - (53, 55, 56)
+Processing - (50, 53, 56)
+[50, 53, 55, 85]Processing - ? false1
+Processing - (50, 53, 55)
+Processing - (53, 55, 85)
+[50, 53, 56, 84]Processing - ? false1
+Processing - (50, 53, 56)
+[50, 53, 56, 85]Processing - ? false1
+Processing - (50, 53, 56)
+[50, 53, 78, 81]Processing - ? true1
+Processing - [50, 53, 78, 81]
+[50, 53, 78, 82]Processing - ? false1
+Processing - (50, 53, 78)
+Processing - (50, 78, 82)
+Processing - (50, 53, 82)
+[50, 53, 81, 82]Processing - ? true1
+Processing - [50, 53, 81, 82]
+[50, 53, 81, 83]Processing - ? false1
+Processing - (50, 53, 81)
+[50, 53, 81, 84]Processing - ? false1
+Processing - (50, 53, 81)
+[50, 53, 81, 85]Processing - ? false1
+Processing - (50, 53, 81)
+[50, 53, 82, 83]Processing - ? false1
+Processing - (50, 53, 82)
+[50, 53, 82, 84]Processing - ? false1
+Processing - (50, 53, 82)
+Processing - (53, 82, 84)
+[50, 53, 82, 85]Processing - ? false1
+Processing - (50, 53, 82)
+Processing - (53, 82, 85)
+[50, 53, 83, 84]Processing - ? true1
+Processing - [50, 53, 83, 84]
+[50, 53, 83, 85]Processing - ? false1
+Processing - (50, 53, 83)
+[50, 54, 55, 56]Processing - ? true1
+Processing - [50, 54, 55, 56]
+[50, 54, 55, 85]Processing - ? false1
+Processing - (50, 54, 55)
+[50, 54, 81, 85]Processing - ? true1
+Processing - [50, 54, 81, 85]
+[50, 55, 56, 85]Processing - ? true1
+Processing - [50, 55, 56, 85]
+[50, 56, 83, 84]Processing - ? true1
+Processing - [50, 56, 83, 84]
+[50, 56, 83, 85]Processing - ? false1
+Processing - (50, 56, 83)
+[50, 78, 80, 81]Processing - ? true1
+Processing - [50, 78, 80, 81]
+[50, 78, 80, 82]Processing - ? false1
+Processing - (50, 78, 80)
+Processing - (78, 80, 82)
+Processing - (50, 78, 82)
+[50, 78, 81, 82]Processing - ? true1
+Processing - [50, 78, 81, 82]
+[50, 80, 81, 82]Processing - ? true1
+Processing - [50, 80, 81, 82]
+[50, 81, 82, 83]Processing - ? true1
+Processing - [50, 81, 82, 83]
+[50, 81, 82, 84]Processing - ? false1
+Processing - (50, 81, 82)
+Processing - (81, 82, 84)
+[50, 81, 82, 85]Processing - ? false1
+Processing - (50, 81, 82)
+Processing - (81, 82, 85)
+[50, 81, 83, 84]Processing - ? true1
+Processing - [50, 81, 83, 84]
+[50, 82, 83, 84]Processing - ? true1
+Processing - [50, 82, 83, 84]
+[83, 84, 86]Processing - ? true1
+[84, 86, 87]Processing - ? true1
+[52, 53, 54, 58]Processing - ? true1
+Processing - [52, 53, 54, 58]
+[52, 53, 56, 58]Processing - ? false1
+Processing - (52, 53, 56)
+[52, 54, 56, 58]Processing - ? true1
+Processing - [52, 54, 56, 58]
+[53, 54, 55, 56]Processing - ? true1
+Processing - [53, 54, 55, 56]
+[53, 54, 55, 85]Processing - ? false1
+Processing - (53, 54, 55)
+Processing - (53, 55, 85)
+[53, 54, 81, 85]Processing - ? true1
+Processing - [53, 54, 81, 85]
+[53, 55, 56, 85]Processing - ? false1
+Processing - (53, 55, 56)
+Processing - (53, 55, 85)
+[53, 56, 83, 84]Processing - ? true1
+Processing - [53, 56, 83, 84]
+[53, 56, 83, 85]Processing - ? false1
+Processing - (53, 56, 83)
+[53, 78, 81, 82]Processing - ? true1
+Processing - [53, 78, 81, 82]
+[53, 81, 82, 83]Processing - ? true1
+Processing - [53, 81, 82, 83]
+[53, 81, 82, 84]Processing - ? false1
+Processing - (53, 81, 82)
+Processing - (81, 82, 84)
+Processing - (53, 82, 84)
+[53, 81, 82, 85]Processing - ? false1
+Processing - (53, 81, 82)
+Processing - (81, 82, 85)
+Processing - (53, 82, 85)
+[53, 81, 83, 84]Processing - ? true1
+Processing - [53, 81, 83, 84]
+[53, 82, 83, 84]Processing - ? true1
+Processing - [53, 82, 83, 84]
+[24, 25, 26, 27]Processing - ? false1
+Processing - (24, 25, 26)
+Processing - (24, 26, 27)
+Processing - (24, 25, 27)
+[24, 25, 26, 28]Processing - ? false1
+Processing - (24, 25, 26)
+[24, 25, 26, 59]Processing - ? false1
+Processing - (24, 25, 26)
+[24, 25, 27, 28]Processing - ? false1
+Processing - (24, 25, 27)
+[24, 26, 27, 28]Processing - ? false1
+Processing - (24, 26, 27)
+[25, 26, 27, 57]Processing - ? true1
+Processing - [25, 26, 27, 57]
+[25, 26, 27, 58]Processing - ? false1
+Processing - (25, 26, 27)
+[25, 26, 28, 57]Processing - ? true1
+Processing - [25, 26, 28, 57]
+[25, 26, 57, 58]Processing - ? true1
+Processing - [25, 26, 57, 58]
+[25, 26, 57, 59]Processing - ? false1
+Processing - (25, 26, 57)
+[25, 26, 58, 59]Processing - ? true1
+Processing - [25, 26, 58, 59]
+[25, 27, 28, 29]Processing - ? true1
+Processing - [25, 27, 28, 29]
+[25, 27, 28, 30]Processing - ? false1
+Processing - (25, 27, 28)
+Processing - (27, 28, 30)
+[25, 27, 28, 57]Processing - ? false1
+Processing - (25, 27, 28)
+[25, 27, 28, 58]Processing - ? false1
+Processing - (25, 27, 28)
+[25, 27, 29, 30]Processing - ? false1
+Processing - (25, 27, 29)
+Processing - (27, 29, 30)
+[25, 27, 29, 57]Processing - ? false1
+Processing - (25, 27, 29)
+[25, 27, 29, 58]Processing - ? false1
+Processing - (25, 27, 29)
+[25, 27, 57, 58]Processing - ? true1
+Processing - [25, 27, 57, 58]
+[25, 28, 29, 58]Processing - ? false1
+Processing - (25, 28, 29)
+[25, 29, 57, 58]Processing - ? true1
+Processing - [25, 29, 57, 58]
+[25, 29, 57, 59]Processing - ? false1
+Processing - (25, 29, 57)
+[25, 29, 58, 59]Processing - ? true1
+Processing - [25, 29, 58, 59]
+[25, 57, 58, 59]Processing - ? false1
+Processing - (25, 57, 58)
+[26, 27, 28, 57]Processing - ? true1
+Processing - [26, 27, 28, 57]
+[26, 27, 28, 58]Processing - ? false1
+Processing - (26, 27, 28)
+[26, 27, 57, 58]Processing - ? true1
+Processing - [26, 27, 57, 58]
+[26, 57, 58, 59]Processing - ? true1
+Processing - [26, 57, 58, 59]
+[55, 56, 57, 58]Processing - ? true1
+Processing - [55, 56, 57, 58]
+[56, 57, 58, 59]Processing - ? true1
+Processing - [56, 57, 58, 59]
+[56, 58, 86, 88]Processing - ? true1
+Processing - [56, 58, 86, 88]
+[56, 83, 84, 86]Processing - ? true1
+Processing - [56, 83, 84, 86]
+[86, 87, 88]Processing - ? true1
+[86, 87, 91]Processing - ? true1
+[86, 88, 91]Processing - ? true1
+[88, 89, 90]Processing - ? true1
+[88, 89, 91]Processing - ? true1
+[88, 90, 91]Processing - ? true1
+[90, 91, 92]Processing - ? true1
+[89, 90, 91]Processing - ? true1
+[58, 86, 87, 88]Processing - ? true1
+Processing - [58, 86, 87, 88]
+[87, 88, 91]Processing - ? true1
+[60, 61, 62, 63]Processing - ? true1
+Processing - [60, 61, 62, 63]
+[33, 34, 35, 62]Processing - ? true1
+Processing - [33, 34, 35, 62]
+[33, 34, 36, 37]Processing - ? false1
+Processing - (33, 34, 36)
+Processing - (34, 36, 37)
+[33, 34, 36, 38]Processing - ? false1
+Processing - (33, 34, 36)
+Processing - (34, 36, 38)
+Processing - (33, 36, 38)
+Processing - (33, 34, 38)
+[33, 34, 36, 62]Processing - ? false1
+Processing - (33, 34, 36)
+Processing - (33, 34, 62)
+[33, 34, 37, 38]Processing - ? true1
+Processing - [33, 34, 37, 38]
+[33, 34, 37, 62]Processing - ? false1
+Processing - (33, 34, 37)
+Processing - (33, 34, 62)
+[33, 34, 38, 62]Processing - ? false1
+Processing - (33, 34, 38)
+Processing - (34, 38, 62)
+Processing - (33, 38, 62)
+Processing - (33, 34, 62)
+[33, 35, 36, 62]Processing - ? true1
+Processing - [33, 35, 36, 62]
+[33, 35, 38, 62]Processing - ? true1
+Processing - [33, 35, 38, 62]
+[33, 36, 38, 62]Processing - ? false1
+Processing - (33, 36, 38)
+Processing - (36, 38, 62)
+Processing - (33, 38, 62)
+[33, 60, 61, 63]Processing - ? false1
+Processing - (33, 60, 61)
+Processing - (60, 61, 63)
+Processing - (33, 61, 63)
+Processing - (33, 60, 63)
+[33, 60, 62, 63]Processing - ? false1
+Processing - (33, 60, 62)
+Processing - (33, 60, 63)
+[33, 61, 62, 63]Processing - ? true1
+Processing - [33, 61, 62, 63]
+[35, 36, 38, 61]Processing - ? true1
+Processing - [35, 36, 38, 61]
+[35, 36, 38, 62]Processing - ? false1
+Processing - (35, 36, 38)
+Processing - (36, 38, 62)
+[35, 37, 38, 39]Processing - ? true1
+Processing - [35, 37, 38, 39]
+[35, 38, 61, 62]Processing - ? true1
+Processing - [35, 38, 61, 62]
+[63, 90, 91, 92]Processing - ? true1
+Processing - [63, 90, 91, 92]
+[65, 66, 67, 92]Processing - ? true1
+Processing - [65, 66, 67, 92]
+[65, 66, 67, 93]Processing - ? false1
+Processing - (65, 66, 67)
+[65, 67, 68, 69]Processing - ? true1
+Processing - [65, 67, 68, 69]
+[67, 69, 70]Processing - ? true1
+[67, 91, 93]Processing - ? true1
+[65, 67, 92, 93]Processing - ? true1
+Processing - [65, 67, 92, 93]
+[70, 73, 75]Processing - ? true1
+[70, 74, 75]Processing - ? true1
+[69, 70, 71, 74]Processing - ? true1
+Processing - [69, 70, 71, 74]
+[69, 70, 72, 74]Processing - ? true1
+Processing - [69, 70, 72, 74]
+[69, 70, 73, 74]Processing - ? false1
+Processing - (69, 70, 73)
+[69, 72, 73, 74]Processing - ? true1
+Processing - [69, 72, 73, 74]
+[40, 41, 42, 74]Processing - ? true1
+Processing - [40, 41, 42, 74]
+[40, 41, 43, 74]Processing - ? true1
+Processing - [40, 41, 43, 74]
+[40, 41, 72, 74]Processing - ? true1
+Processing - [40, 41, 72, 74]
+[40, 42, 43, 74]Processing - ? false1
+Processing - (40, 42, 43)
+Processing - (42, 43, 74)
+Processing - (40, 43, 74)
+Processing - (40, 42, 74)
+[40, 72, 73, 74]Processing - ? true1
+Processing - [40, 72, 73, 74]
+[72, 73, 74, 75]Processing - ? true1
+Processing - [72, 73, 74, 75]
+[73, 75, 76, 77]Processing - ? true1
+Processing - [73, 75, 76, 77]
+[73, 75, 76, 78]Processing - ? false1
+Processing - (73, 75, 76)
+Processing - (75, 76, 78)
+[73, 75, 77, 78]Processing - ? true1
+Processing - [73, 75, 77, 78]
+[73, 75, 78, 80]Processing - ? true1
+Processing - [73, 75, 78, 80]
+[73, 76, 77, 78]Processing - ? true1
+Processing - [73, 76, 77, 78]
+[76, 77, 79]Processing - ? true1
+[76, 78, 79]Processing - ? true1
+[73, 76, 78, 80]Processing - ? true1
+Processing - [73, 76, 78, 80]
+[73, 77, 78, 80]Processing - ? true1
+Processing - [73, 77, 78, 80]
+[46, 47, 48, 50]Processing - ? true1
+Processing - [46, 47, 48, 50]
+[46, 47, 49, 50]Processing - ? true1
+Processing - [46, 47, 49, 50]
+[46, 47, 49, 51]Processing - ? false1
+Processing - (46, 47, 49)
+Processing - (47, 49, 51)
+[46, 47, 50, 51]Processing - ? true1
+Processing - [46, 47, 50, 51]
+[46, 47, 50, 53]Processing - ? false1
+Processing - (46, 47, 50)
+Processing - (47, 50, 53)
+[46, 47, 51, 78]Processing - ? true1
+Processing - [46, 47, 51, 78]
+[46, 48, 49, 50]Processing - ? true1
+Processing - [46, 48, 49, 50]
+[46, 48, 49, 53]Processing - ? false1
+Processing - (46, 48, 49)
+Processing - (48, 49, 53)
+[46, 48, 50, 53]Processing - ? true1
+Processing - [46, 48, 50, 53]
+[46, 49, 50, 53]Processing - ? true1
+Processing - [46, 49, 50, 53]
+[46, 50, 53, 78]Processing - ? true1
+Processing - [46, 50, 53, 78]
+[46, 51, 53, 78]Processing - ? true1
+Processing - [46, 51, 53, 78]
+[75, 76, 77, 78]Processing - ? false1
+Processing - (75, 76, 77)
+Processing - (75, 77, 78)
+Processing - (75, 76, 78)
+[75, 76, 77, 79]Processing - ? false1
+Processing - (75, 76, 77)
+Processing - (76, 77, 79)
+Processing - (75, 77, 79)
+Processing - (75, 76, 79)
+[75, 76, 78, 79]Processing - ? false1
+Processing - (75, 76, 78)
+Processing - (76, 78, 79)
+Processing - (75, 78, 79)
+Processing - (75, 76, 79)
+[75, 76, 78, 80]Processing - ? false1
+Processing - (75, 76, 78)
+Processing - (75, 78, 80)
+[75, 76, 78, 82]Processing - ? false1
+Processing - (75, 76, 78)
+[75, 76, 79, 82]Processing - ? false1
+Processing - (75, 76, 79)
+[75, 77, 78, 79]Processing - ? false1
+Processing - (75, 77, 78)
+Processing - (75, 78, 79)
+Processing - (75, 77, 79)
+[75, 77, 78, 80]Processing - ? false1
+Processing - (75, 77, 78)
+Processing - (77, 78, 80)
+Processing - (75, 78, 80)
+Processing - (75, 77, 80)
+[75, 77, 78, 82]Processing - ? false1
+Processing - (75, 77, 78)
+Processing - (77, 78, 82)
+[75, 77, 79, 82]Processing - ? false1
+Processing - (75, 77, 79)
+[75, 78, 79, 80]Processing - ? false1
+Processing - (75, 78, 79)
+Processing - (78, 79, 80)
+Processing - (75, 79, 80)
+Processing - (75, 78, 80)
+[75, 78, 79, 82]Processing - ? false1
+Processing - (75, 78, 79)
+[75, 78, 80, 82]Processing - ? false1
+Processing - (75, 78, 80)
+Processing - (78, 80, 82)
+[76, 77, 78, 82]Processing - ? true1
+Processing - [76, 77, 78, 82]
+[77, 78, 79, 82]Processing - ? true1
+Processing - [77, 78, 79, 82]
+[77, 78, 80, 82]Processing - ? false1
+Processing - (77, 78, 80)
+Processing - (78, 80, 82)
+Processing - (77, 80, 82)
+Processing - (77, 78, 82)
+[78, 79, 80, 81]Processing - ? false1
+Processing - (78, 79, 80)
+Processing - (78, 80, 81)
+[78, 79, 81, 82]Processing - ? true1
+Processing - [78, 79, 81, 82]
+[78, 80, 81, 82]Processing - ? false1
+Processing - (78, 80, 81)
+Processing - (80, 81, 82)
+Processing - (78, 81, 82)
+Processing - (78, 80, 82)
+[54, 55, 56, 85]Processing - ? true1
+Processing - [54, 55, 56, 85]
+[54, 55, 58]Processing - ? true1
+[81, 82, 83, 84]Processing - ? true1
+Processing - [81, 82, 83, 84]
+[81, 83, 84, 86]Processing - ? true1
+Processing - [81, 83, 84, 86]
+[83, 84, 86, 87]Processing - ? false1
+Processing - (83, 84, 86)
+Processing - (84, 86, 87)
+[87, 90, 91, 92]Processing - ? true1
+Processing - [87, 90, 91, 92]
+[64, 65, 67, 93]Processing - ? true1
+Processing - [64, 65, 67, 93]
+[64, 67, 91, 93]Processing - ? true1
+Processing - [64, 67, 91, 93]
+[67, 68, 69, 70]Processing - ? true1
+Processing - [67, 68, 69, 70]
+[67, 69, 70, 73]Processing - ? false1
+Processing - (67, 69, 70)
+Processing - (69, 70, 73)
+[67, 91, 92, 93]Processing - ? true1
+Processing - [67, 91, 92, 93]
+[66, 67, 68, 69]Processing - ? true1
+Processing - [66, 67, 68, 69]
+[66, 67, 68, 70]Processing - ? false1
+Processing - (66, 67, 68)
+[66, 67, 69, 70]Processing - ? true1
+Processing - [66, 67, 69, 70]
+[66, 67, 69, 73]Processing - ? false1
+Processing - (66, 67, 69)
+[66, 67, 70, 73]Processing - ? true1
+Processing - [66, 67, 70, 73]
+[66, 67, 70, 93]Processing - ? false1
+Processing - (66, 67, 70)
+[66, 67, 91, 92]Processing - ? true1
+Processing - [66, 67, 91, 92]
+[66, 67, 91, 93]Processing - ? false1
+Processing - (66, 67, 91)
+Processing - (67, 91, 93)
+[66, 67, 92, 93]Processing - ? true1
+Processing - [66, 67, 92, 93]
+[66, 68, 69, 70]Processing - ? true1
+Processing - [66, 68, 69, 70]
+[66, 68, 70, 74]Processing - ? true1
+Processing - [66, 68, 70, 74]
+[66, 69, 70, 73]Processing - ? true1
+Processing - [66, 69, 70, 73]
+[66, 69, 70, 74]Processing - ? false1
+Processing - (66, 69, 70)
+[66, 70, 73, 74]Processing - ? true1
+Processing - [66, 70, 73, 74]
+[66, 72, 73, 74]Processing - ? true1
+Processing - [66, 72, 73, 74]
+[70, 71, 74, 75]Processing - ? true1
+Processing - [70, 71, 74, 75]
+[70, 72, 73, 74]Processing - ? true1
+Processing - [70, 72, 73, 74]
+[70, 72, 73, 75]Processing - ? false1
+Processing - (70, 72, 73)
+Processing - (70, 73, 75)
+[70, 72, 74, 75]Processing - ? true1
+Processing - [70, 72, 74, 75]
+[70, 73, 74, 75]Processing - ? true1
+Processing - [70, 73, 74, 75]
+Computing 1st boundary matrix...Vertices 93Edges - 542Triangles - 1730Tetrahedra - 244
+Rank B0 : 92 Rank Cp1 : 542 Rank Cp0 : 93Rank Z1 : 450
+Computing 2nd boundary matrix...
+Rank B1 : 375 Rank Cp2 : 1730 Rank Cp2 : 1730Rank Z2 : 1355
+Filtration r = 3.5Simples Homologies : h0 1 h1 75 h2 1111
+"Dimension = " = "Dimension = "
+va.Alpha.dimension(B) = 3
+va.Alpha.numsimplices(B, 0) = 93
+va.Alpha.numsimplices(B, 1) = 542
+va.Alpha.numsimplices(B, 2) = 723
+va.Alpha.numsimplices(B, 3) = 244
+Done
