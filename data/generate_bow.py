@@ -1,9 +1,7 @@
-import string
-import nltk
 import csv
+import nltk
 import pickle
-import itertools
-from collections import deque
+import string
 from sklearn.feature_extraction.text import CountVectorizer
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import sent_tokenize, word_tokenize
@@ -31,7 +29,7 @@ def write_to_file(sentences, embeddings, encoding_type, i = 1):
         pickle.dump({'sentences': sentences, 'embeddings': embeddings},out)
 
 
-BATCH_SIZE = 1
+BATCH_SIZE = 500
 
 for label in ('ai', 'human'):
     if label == 'ai':
@@ -64,8 +62,5 @@ for label in ('ai', 'human'):
             vectorizer = CountVectorizer()
             embeddings = vectorizer.fit_transform(proceesed_sentences)
             all_embeddings.append(embeddings.toarray())
-            print(sentences)
-            print(len(sentences))
-            print(all_embeddings)
-        # write_to_file(all_sentences, all_embeddings, 'bow', i)
+        write_to_file(all_sentences, all_embeddings, 'bow', i)
 
