@@ -57,8 +57,8 @@ end
 # provide a copy function in base for generic, type AlphaComplex
 Base.copy(AlphaC::AlphaComplex) = AlphaComplex(simplices(AlphaC))
 
-function Base.insert!(AlphaC::AlphaComplex, simp, filtration=0.0)
-    STs.insert!(AlphaC.simplices, simp, filtration)
+function Base.insert!(AlphaC::AlphaComplex, simp, filtration, death= 0.0)
+    STs.insert!(AlphaC.simplices, simp, filtration, death)
     _dim = length(simp) -1
     if _dim > AlphaC.dimension
         AlphaC.dimension = _dim

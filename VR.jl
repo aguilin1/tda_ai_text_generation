@@ -30,8 +30,8 @@ end
 # provide a copy function in base for generic, type VRComplex
 Base.copy(VietorisRipsC::VRComplex) = VRComplex(simplices(VietorisRipsC))
 
-function Base.insert!(VietorisRipsC::VRComplex, simp, filtration=0.0)
-    STs.insert!(VietorisRipsC.simplices, simp, filtration)
+function Base.insert!(VietorisRipsC::VRComplex, simp, filtration, death=0.0)
+    STs.insert!(VietorisRipsC.simplices, simp, filtration, death)
     _dim = length(simp) -1
     if _dim > VietorisRipsC.dimension
         VietorisRipsC.dimension = _dim

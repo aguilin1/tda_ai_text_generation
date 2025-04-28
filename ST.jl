@@ -36,14 +36,18 @@ module STs
 abstract type ST end
 
 # Node - abstract type, subtype of tree ST
-struct _node <: ST
+mutable struct _node <: ST
     id       :: Int             # Just a label
     children :: Array{_node, 1}
     parent   :: ST
     birth    :: Float32
+    death    :: Float32
     # create new node, julia does not have classes like Python.
     # Julia dispatches over type.
-    _node(id, parent, filtration) = new(id, [], parent, filtration)
+    # Create nodes with same birth and death=-birth, to create complete objects... 
+    # edit death as linking to children happens.
+    # Objects that do not die, death value there will have -value.
+    _node(id, parent, filtration, death) = new(id, [], parent, filtration, death)
 end
 
 # Root - abstract type, subtype of Tree ST
@@ -89,35 +93,73 @@ end
 
 # insertion will only work as we insert vertex to edges to triangles to tet etc..
 # not straight tet
-function insert!(s::ST, x, filtration)
+function insert!(s::ST, x, filtration, death)
     # this sort is why we do not need to remeber order
     # this sort will be sort after distance metric. <-- fed by column sort order of mapslices output.
-    return insert_ord!(s, sort(collect(x)), filtration)
+    return insert_ord!(s, sort(collect(x)), filtration, death)
 end
 
-function insert_ord!(s::ST, x, filtration)
+function insert_ord!(s::ST, x, filtration, death)
     for (i,v) in enumerate(x)
         if haschild(s,v)
             # do nothing
         else
             # Gluing happens before insertion.
-            push!(s.children, _node(v,s, filtration))
+            push!(s.children, _node(v,s, filtration, death))
+	        # As soon as link is established. vertex becomes an edge so we set death
+            sibling = find_child(s,v)
+            simplex = simplex_node(sibling)
+	        if length(simplex) > 1
+                # 0 is root node
+                for k in simplex
+                    if k == v || k == 0
+                        continue
+                    else
+                        killedchild = find_child(s.parent, k)
+                        if !isnothing(killedchild)
+                            # only set new death, if it was not set
+                            if killedchild.death == 0.0
+                                killedchild.death=filtration
+                            end
+                        end
+                    end
+                end
+            end
         end
         # only look deeper by dropping i items
-        insert_ord!(find_child(s,v), Iterators.drop(x,i), filtration)
+        insert_ord!(find_child(s,v), Iterators.drop(x,i), filtration, death)
     end
     return s
 end
 
 # insert cluster of nodes with right order
-function insert_ord_nodes!(s::ST, simp, filtration)
+function insert_ord_nodes!(s::ST, simp, filtration, death)
     node = s # tree
     for v in simp
         if haschild(node, v)
             node = find_child(node, v)
         else
-            local_node = _node(v,node, filtration)
+            local_node = _node(v,node, filtration, death)
             push!(node.children,local_node)
+	        # as higher order objects connect, lower order objects die
+            # get path to parent and set death for all upper ones.
+            sibling = find_child(s,v)
+            simplex = simplex_node(v)
+	        if length(simplex) > 1
+                for k in simplex
+                    # 0 is root node
+                    if k == v || k == 0
+                        continue
+                    else
+                        killedchild = find_child(s.parent, k)
+                        if !isnothing(killedchild)
+                            if killedchild.death == 0.0
+                                killedchild.death=filtration
+                            end
+                        end
+                    end
+                end
+            end
             node = local_node
         end
     end
@@ -150,6 +192,7 @@ end
 
 isemptyface(s::ST) = typeof(s) == _root
 
+# Simplex.
 function simplex_node(_node::ST)
     simp = Array{Int,1}()
     while !isemptyface(_node)
